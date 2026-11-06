@@ -1,0 +1,63 @@
+#include <stdio.h>
+int main()
+{
+    int i, choice;
+    char message[] = "hello world";
+    while (1)
+    {
+        printf("\n 1.AND   2.OR   3.XOR   4.EXIT \n");
+        printf("Enter the choice: ");
+        scanf("%d", &choice);
+        switch (choice)
+        {
+        case 1:
+        {
+            for (i = 0; message[i] != '\0'; i++)
+            {
+                message[i] = message[i] & 127;
+            }
+            printf("AND 127 : %s \n", message);
+            break;
+        }
+        case 2:
+        {
+            for (i = 0; message[i] != '\0'; i++)
+            {
+                message[i] = message[i] | 127;
+            }
+            
+
+
+            printf("OR 127 : %s\n", message);
+            break;
+        }
+        case 3:
+        {
+            for (i = 0; message[i] != '\0'; i++)
+            {
+                message[i] = message[i] ^ 127;
+            }
+            printf("XOR 127 : %d\n", message[i]);
+            break;
+        }
+        case 4:
+            printf("Exiting");
+            return 0;
+        default:
+            printf("Invalid choice");
+            break;
+        }
+    }
+    return 0;
+}
+
+
+
+
+
+
+
+
+
+
+

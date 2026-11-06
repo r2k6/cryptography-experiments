@@ -1,0 +1,30 @@
+#include<stdio.h>
+int main()
+{
+    int i;
+    char message[] = "Hello World";
+    for(i =0;message[i] != '\0';i++)
+    {
+        message[i] = message[i] ^ 0;
+    }
+    printf("XOR: %s\n",message);
+    for(i =0;message[i] != '\0';i++)
+    {
+        message[i] = message[i] ^ 0;
+    }
+    printf("Original: %s\n",message);
+    return 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
